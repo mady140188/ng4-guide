@@ -1,0 +1,25 @@
+<div class="d-flex flex-row">
+    <div class="p-2">
+        <button>New recipe</button>
+    </div>
+    <span class="p-2">
+        
+            <a href="#" *ngFor="let recipe of recipies">
+                <span class="p-2">
+                    <h4>
+                        {{ recipe.name }}
+                    </h4>
+                    <p>{{ recipe.description }}</p>
+                </span>
+                <span>
+                    <img 
+                    [src]="recipe.imagePath"
+                    alt="{{ recipe.name }}" 
+                    style="max-height:50px">
+                </span>
+            </a> 
+        <app-recipe-detail></app-recipe-detail>
+    </span>    
+</div>
+
+
